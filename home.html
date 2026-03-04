@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 // ================= BALANCE =================
 let balanceEl = document.getElementById("balance");
 let historyEl = document.getElementById("history");
-let balance = parseFloat(localStorage.getItem("balance"))||7093782.88;
+let balance = parseFloat(localStorage.getItem("balance"))||;
 balanceEl.innerText="$"+balance.toFixed(2);
 
 // ================= WALLET =================
@@ -238,7 +238,7 @@ function SuccessDeposit(){
    saveHistory("Deposit +"+amount);
    updateBalanceEl();
    document.getElementById("depositLoading").innerText="Deposit Successful!";
- },3000);
+ },5000);
 }
 
 // ================= WITHDRAW =================
